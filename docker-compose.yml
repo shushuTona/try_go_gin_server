@@ -1,13 +1,25 @@
 version: '3'
 services:
-  web:
-    container_name: web
+  go_gin:
+    container_name: go_gin
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./container/app/Dockerfile
     ports:
-      - 8080:8080
+      - 8080
     volumes:
       - ./src:/go/src
     restart: always
     tty: true
+  web:
+    container_name: web
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./public:/usr/share/nginx/html
+      - ./container/web/conf.d:/etc/nginx/conf.d
+    restart: always
+    tty: true
+    depends_on:
+      - go_gin
