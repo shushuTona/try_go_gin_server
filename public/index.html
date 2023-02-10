@@ -6,8 +6,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>try_go_gin_server</title>
 <script defer src="/index.js"></script>
+<style>
+    main {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .input-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-box-label {
+        display: flex;
+    }
+    .input-box-label + .input-box-label {
+        margin-top: 5px;
+    }
+    .input-box-label span {
+        min-width: 100px;
+    }
+    .input-box-label input {
+        margin: 0 0 0 10px;
+        width: 100%;
+    }
+    .input-box .input-box-btn {
+        margin: 10px auto 0;
+        width: 100%;
+        max-width: 250px;
+    }
+    .input-box .input-box-error {
+        color: red;
+        text-align: center;
+    }
+</style>
 </head>
 <body>
+
+<main>
+    <h1>try_go_gin_server</h1>
+
+    <main>
+        <div class="input-box">
+            <label class="input-box-label">
+                <span>user name</span>
+                <input type="text" name="user">
+            </label>
+            <label class="input-box-label">
+                <span>password</span>
+                <input type="text" name="pass">
+            </label>
+            <button class="input-box-btn" type="button">login</button>
+            <p class="input-box-error"></p>
+        </div>
+    </main>
 
 </body>
 </html>
