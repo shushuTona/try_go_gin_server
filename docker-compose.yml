@@ -11,6 +11,8 @@ services:
       - ./src:/go/src
     restart: always
     tty: true
+    depends_on:
+      - memcached
   web:
     container_name: web
     image: nginx
@@ -23,3 +25,10 @@ services:
     tty: true
     depends_on:
       - go_gin
+  memcached:
+    container_name: memcached
+    image: memcached
+    ports:
+      - 11211:11211
+    restart: always
+    tty: true

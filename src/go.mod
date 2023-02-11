@@ -3,6 +3,8 @@ module try_go_gin_server
 go 1.19
 
 require (
+	github.com/bradfitz/gomemcache v0.0.0-20230124162541-5f7a7d875746 // indirect
+	github.com/bradleypeabody/gorilla-sessions-memcache v0.0.0-20181103040241-659414f458e1 // indirect
 	github.com/gin-contrib/sessions v0.0.5 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.8.2 // indirect
